@@ -89,3 +89,30 @@ Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 327ms (Views: 314.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-02 21:33:52 -0600
+Processing by RootController#index as HTML
+Started GET "/" for ::1 at 2017-03-02 21:33:52 -0600
+  Rendering root/index.html within layouts/application
+  Rendered root/index.html within layouts/application (3.0ms)
+Processing by RootController#index as HTML
+  Rendering root/index.html within layouts/application
+  Rendered root/index.html within layouts/application (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 272ms (Views: 270.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 372ms (Views: 355.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-02 21:34:35 -0600
+Processing by RootController#index as HTML
+  Rendering root/index.html within layouts/application
+  Rendered root/index.html within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
