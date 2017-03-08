@@ -1,7 +1,7 @@
 # features/root.feature
-Feature: Homepage
+Feature: Homepage Testing
 
-  Scenario: Access website
+  Scenario: Access Contact
     Given I am on homepage
     When I click contact us
     Then I should see a contact page
