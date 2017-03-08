@@ -10,3 +10,5 @@ end
 Then(/^I should see a contact page$/) do
   page.has_content?("The page you were looking for doesn't exist.")
 end
+
+
