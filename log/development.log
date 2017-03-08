@@ -3539,3 +3539,12 @@ Processing by RootController#index as HTML
 Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-07 22:44:55 -0600
+Processing by RootController#index as HTML
+  Rendering root/index.html.erb within layouts/application
+  Rendered root/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 122ms (Views: 115.3ms | ActiveRecord: 0.0ms)
+
+
