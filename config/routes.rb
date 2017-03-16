@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'join/', to: 'users#new'
+
+  # Routes for login page (i.e. the sessions controller)
+  get 'login/', to: 'sessions#new'
+  post 'login/', to: 'sessions#create'
+  delete 'logout/', to: 'sessions#destroy'
+
+
   get 'contact/', to: 'root#contact'
   get 'about/', to: 'root#about'
   get 'sponsors/', to: 'root#sponsors'
