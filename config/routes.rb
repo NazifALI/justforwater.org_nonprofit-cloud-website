@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  #Page to create new users. This is intended for volunteers.
   get 'join/', to: 'users#new'
+  post 'join/', to: 'users#create'
 
   # Routes for login page (i.e. the sessions controller)
   get 'login/', to: 'sessions#new'
@@ -16,6 +18,9 @@ Rails.application.routes.draw do
   get 'projects/', to: 'root#projects'
 
   get 'boardofmembers/', to: 'root#boardofmembers'
+
+  #Magic Resoure for users...
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'root#index'

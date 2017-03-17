@@ -8,6 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
+# Use bootstrap for stylesheets.
+gem 'bootstrap-sass', '3.3.6'
 # Use postgres for heroku databae
 gem "pg"
 # Use Puma as the app server
