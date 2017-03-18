@@ -12,6 +12,9 @@ gem 'rails', '~> 5.0.1'
 gem 'bootstrap-sass', '3.3.6'
 # Use postgres for heroku databae
 gem "pg"
+#integration testing
+gem 'rails-controller-testing'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

@@ -7141,3 +7141,105 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 61ms (Views: 53.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/login" for ::1 at 2017-03-17 15:55:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 121ms (Views: 113.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-17 15:55:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hdRmx3qK3H4vZcTlWZux7/09vVuwG1ZignfNFPSedtnJGA59dTpYCy7vP8rLrPyVaIct0vHc7DYvgZxI63sNYg==", "session"=>{"email"=>"ericcochrane1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ericcochrane1@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 221ms (Views: 56.5ms | ActiveRecord: 27.9ms)
+
+
+Started POST "/login" for ::1 at 2017-03-17 15:55:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjJvdL0lmyJChg6deEWpPKnIzyI+SwwMy9BWlhu4TbbO/gfOspUfV0MM9bLqcuRGPHJfq3+MtlhmJgfKBF02DQ==", "session"=>{"email"=>"ericcochrane1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ericcochrane1@gmail.com"], ["LIMIT", 1]]
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 193ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/login" for ::1 at 2017-03-17 16:30:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-17 16:31:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4iNgk5hcYQtErEUDqNqAhgyTLxpvHe0LW7Xezl8Bduuu7wgpl+zlfkUmviw67c38mSm/ky7aV1/2Q4+SQOQNUA==", "session"=>{"email"=>"ericcochrane1@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ericcochrane1@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 158ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users/1" for ::1 at 2017-03-17 16:31:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 50.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sponsors/" for ::1 at 2017-03-17 16:39:22 -0500
+Processing by RootController#sponsors as HTML
+  Rendering root/sponsors.html.erb within layouts/application
+  Rendered root/sponsors.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 16:39:23 -0500
+Processing by RootController#index as HTML
+  Rendering root/index.html.erb within layouts/application
+  Rendered root/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact/" for ::1 at 2017-03-17 16:39:26 -0500
+Processing by RootController#contact as HTML
+  Rendering root/contact.erb within layouts/application
+  Rendered root/contact.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-17 16:39:31 -0500
+Processing by RootController#index as HTML
+  Rendering root/index.html.erb within layouts/application
+  Rendered root/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/join/" for ::1 at 2017-03-17 16:39:33 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
