@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'sponsors/join', to: 'sponsors#new'
+  post 'sponsors/join', to: 'sponsors#create'
+  #Note that this is handled by root and not the sponsors controller.
+  get 'sponsors/', to: 'root#sponsors'
+
   #Page to create new users. This is intended for volunteers.
   get 'join/', to: 'users#new'
   post 'join/', to: 'users#create'
@@ -12,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'contact/', to: 'root#contact'
   get 'about/', to: 'root#about'
-  get 'sponsors/', to: 'root#sponsors'
+
   get 'members/', to: 'root#members'
   get 'discover/', to: 'root#discover'
   get 'projects/', to: 'root#projects'
