@@ -24,8 +24,10 @@ Rails.application.routes.draw do
 
   get 'boardofmembers/', to: 'root#boardofmembers'
 
-  #Magic Resoure for users...
+  #Declares common routes for users.
+  #e.g. users/show to users#show
   resources :users
+  get 'users/:user_id/sponsors', to: 'users#show_sponsors'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'root#index'

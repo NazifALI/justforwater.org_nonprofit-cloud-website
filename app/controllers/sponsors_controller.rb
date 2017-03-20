@@ -7,7 +7,7 @@ class SponsorsController < ApplicationController
     @sponsor = Sponsor.new(sponsor_params)
     if @sponsor.save
       flash[:success] = "Thanks for your interest in Just 4 Water!"
-      redirect_to @sponsor
+      redirect_to sponsors_url
     else
       render 'new'
     end

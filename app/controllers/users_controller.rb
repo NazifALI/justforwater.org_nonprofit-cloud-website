@@ -8,6 +8,12 @@ class UsersController < ApplicationController
     #debugger
   end
 
+  #The table sytling is in app/assets/stylesheets/customscss
+  def show_sponsors
+    @sponsors = Sponsor.all
+
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
