@@ -11,7 +11,11 @@ class UsersController < ApplicationController
   #The table sytling is in app/assets/stylesheets/customscss
   def show_sponsors
     @sponsors = Sponsor.all
-
+    @sort = params[:sort] ? params[:sort] : session[:sort]
+    if !@sort.nil?
+      @sponsors = @sponsors.order(@sort)
+    end
+    session[:sort] = @sort
   end
 
   def create

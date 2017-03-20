@@ -1,16 +1,17 @@
-
-  <table style="width:95%">
+<table style="width:95%">
+  <tr>
+    <th><%= link_to "Date Created", :sort => "created_at"%></th>
+    <th><%= link_to "Name", :sort => "name"%></th>
+    <th><%= link_to "Email", :sort => "email"%></th>
+    <th><%= link_to "Phone", :sort => "phone"%></th>
+  </tr>
+  <%- @sponsors.each do |sponsor| -%>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
+      <td><%= sponsor.created_at %></td>
+      <td><%= sponsor.name %></td>
+      <td><%= sponsor.email %></td>
+      <td><%= sponsor.phone %></td>
+      <td><button type="button" href=sponsors_path></button></td>
     </tr>
-    <%- @sponsors.each do |sponsor| -%>
-      <tr>
-        <td><%= sponsor.name %></td>
-        <td><%= sponsor.email %></td>
-        <td><%= sponsor.phone %></td>
-
-      </tr>
-    <%- end -%>
-  </table>
+  <%- end -%>
+</table>
