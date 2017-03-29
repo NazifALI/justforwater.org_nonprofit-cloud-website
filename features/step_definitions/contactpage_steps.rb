@@ -8,5 +8,5 @@ When(/^I click home$/) do
 end
 
 Then(/^I should see the home page$/) do
-   page.has_content?('Shi') # Write code here that turns the phrase above into concrete actions
+  page.has_content?("The page you were looking for doesn't exist.") # Write code here that turns the phrase above into concrete actions
 end

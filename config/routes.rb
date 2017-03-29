@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'members/new'
+
   get 'sponsors/join', to: 'sponsors#new'
   post 'sponsors/join', to: 'sponsors#create'
   #Note that this is handled by root and not the sponsors controller.
