@@ -4,11 +4,19 @@ class UsersController < ApplicationController
   before_action :admin_user,  only: :destroy
 
   def index
-    @users = User.all
+    #Show either user data or sponsor data.
+    @data = Sponsor.all
+    puts "Selector= " % params[:selector]
+    if params[:selector] == '1'
+      @data = User.all
+    else
+      @data = Sponsor.all
+    end
   end
 
   def new
     @user = User.new
+
   end
 
   def destroy
@@ -49,7 +57,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attribute(user_params)
+    if @user.update_attributes(user_params)
       flash[:success] = "Profile Updated"
       redirect_to @user
     else
@@ -58,7 +66,6 @@ class UsersController < ApplicationController
   end
 
   private
-
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
