@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # Routes for login page (i.e. the sessions controller)
   get 'login/', to: 'sessions#new'
   post 'login/', to: 'sessions#create'
-  delete 'logout/', to: 'sessions#destroy'
+  get 'logout/', to: 'sessions#destroy'
 
 
   get 'contact/', to: 'root#contact'
@@ -27,7 +27,9 @@ Rails.application.routes.draw do
   #Declares common routes for users.
   #e.g. users/show to users#show
   resources :users
-  get 'users/:user_id/sponsors', to: 'users#show_sponsors'
+
+  # delete: moving this to sponsors#show
+  #get 'users/:user_id/sponsors', to: 'users#show_sponsors'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'root#index'

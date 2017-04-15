@@ -1,1 +1,21 @@
-<%= @user.name %>, <%= @user.email %>
+<h1>Welcome <%= @user.name %>! </h1>
+
+<%= link_to "View all users", users_path %>
+
+<table style="width:95%">
+  <tr>
+    <th><%= link_to "Date Created", :sort => "created_at"%></th>
+    <th><%= link_to "Name", :sort => "name"%></th>
+    <th><%= link_to "Email", :sort => "email"%></th>
+    <th><%= link_to "Phone", :sort => "phone"%></th>
+  </tr>
+  <%- @sponsors.each do |sponsor| -%>
+    <tr>
+      <td><%= sponsor.created_at %></td>
+      <td><%= sponsor.name %></td>
+      <td><%= sponsor.email %></td>
+      <td><%= sponsor.phone %></td>
+      <td><button type="button" href=sponsors_path></button></td>
+    </tr>
+  <%- end -%>
+</table>

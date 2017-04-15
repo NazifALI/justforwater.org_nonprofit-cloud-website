@@ -13,6 +13,11 @@ class SponsorsController < ApplicationController
     end
   end
 
+  def show
+    @sponsor = sponsor.find(params[:id])
+  end
+
+
   private
 
     def sponsor_params
