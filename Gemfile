@@ -14,7 +14,8 @@ gem 'bootstrap-sass', '3.3.6'
 gem "pg"
 #integration testing
 gem 'rails-controller-testing'
-
+gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -66,4 +67,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'cloudinary'

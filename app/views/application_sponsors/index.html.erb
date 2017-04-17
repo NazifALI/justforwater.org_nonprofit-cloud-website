@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Application Sponsors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @application_sponsors.each do |application_sponsor| %>
+      <tr>
+        <td><%= application_sponsor.name %></td>
+        <td><%= application_sponsor.description %></td>
+        <td><%= application_sponsor.image_id %></td>
+        <td><%= link_to 'Show', application_sponsor %></td>
+        <td><%= link_to 'Edit', edit_application_sponsor_path(application_sponsor) %></td>
+        <td><%= link_to 'Destroy', application_sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Application Sponsor', new_application_sponsor_path %>
