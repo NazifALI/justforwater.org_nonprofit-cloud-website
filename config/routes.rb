@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # Routes for login page (i.e. the sessions controller)
   get 'login/', to: 'sessions#new'
   post 'login/', to: 'sessions#create'
-  get 'logout/', to: 'sessions#destroy'
+  delete 'logout/', to: 'sessions#destroy'
 
 
   get 'contact/', to: 'root#contact'
