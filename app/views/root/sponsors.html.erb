@@ -38,7 +38,7 @@
             <% ApplicationSponsor.all.each do |application_sponsor| %>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img src="<%=application_sponsor.icon.url%>" height="200" width="200" align="right" class="img-thumbnail" alt="Responsive image">
+                        <img src="<%=application_sponsor.icon.url%>" height="200" width="200" align="right" class="img-thumbnail" alt="<%=application_sponsor.name%>">
                     </div>
                     <div class="col-sm-6">
                         <%=application_sponsor.description%>
