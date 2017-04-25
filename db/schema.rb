@@ -23,20 +23,6 @@ ActiveRecord::Schema.define(version: 20170417041255) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "examples", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "members", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sponsors", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
