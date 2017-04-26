@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20170426003759) do
     t.string   "icon"
   end
 
+  create_table "examples", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -55,6 +62,7 @@ ActiveRecord::Schema.define(version: 20170426003759) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.boolean  "adminPriveleges"
     t.string   "remember_digest"
     t.boolean  "admin"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
