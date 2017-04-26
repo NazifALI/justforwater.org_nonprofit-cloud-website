@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :application_contacts
   resources :application_sponsors
   get 'sponsors/join', to: 'sponsors#new'
   post 'sponsors/join', to: 'sponsors#create'
