@@ -1,13 +1,5 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
-<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-  <%= label_tag(:name,"Show:") %>
-  <%= select_tag(:selector, options_for_select([['Members', 1], ['Sponsors', 2]], 2)) %>
-  <%=  %>
-  <%= label_tag(:name,"Search for:") %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search a name"%>
-  <%= submit_tag "Show", :name=>nil %>
-<% end %>
 
 <table style="width:95%">
   <thead>
@@ -17,11 +9,11 @@
       <th><%= link_to "Date Created", :sort => "created_at"%></th>
     </tr>
   </thead>
-  <%- @data.each do |data| -%>
+  <%- @users.each do |user| -%>
     <tr>
-      <td><%= data.name %></td>
-      <td><%= data.email %></td>
-      <td><%= data.created_at %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at %></td>
     </tr>
   <%- end -%>
 </table>

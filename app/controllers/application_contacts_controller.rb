@@ -1,4 +1,5 @@
 class ApplicationContactsController < ApplicationController
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :show]
   before_action :set_application_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /application_contacts
@@ -70,5 +71,12 @@ class ApplicationContactsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_contact_params
       params.require(:application_contact).permit(:name, :email, :phone, :description)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
     end
 end

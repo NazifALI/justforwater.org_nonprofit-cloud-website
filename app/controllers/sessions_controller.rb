@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       remember user
       #Goes to route for a user's page.
-      redirect_to user
+      redirect_to application_contacts_url
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid email/password combination'

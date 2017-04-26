@@ -1,17 +1,12 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :show]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user,  only: :destroy
 
   def index
     #Show either user data or sponsor data.
-    @data = Sponsor.all
-    puts "Selector= " % params[:selector]
-    if params[:selector] == '1'
-      @data = User.all
-    else
-      @data = Sponsor.all
-    end
+    @users = User.all
+    
   end
 
   def new
