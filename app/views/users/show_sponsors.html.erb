@@ -1,9 +1,9 @@
 <table style="width:95%">
   <tr>
-    <th><%= link_to "Date Created", :sort => "created_at"%></th>
-    <th><%= link_to "Name", :sort => "name"%></th>
-    <th><%= link_to "Email", :sort => "email"%></th>
-    <th><%= link_to "Phone", :sort => "phone"%></th>
+    <th class="text-center"><%= link_to "Date Created", :sort => "created_at"%></th>
+    <th class="text-center"><%= link_to "Name", :sort => "name"%></th>
+    <th class="text-center"><%= link_to "Email", :sort => "email"%></th>
+    <th class="text-center"><%= link_to "Phone", :sort => "phone"%></th>
   </tr>
   <%- @sponsors.each do |sponsor| -%>
     <tr>

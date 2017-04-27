@@ -1,0 +1,18 @@
+development:
+  cloud_name: just4water
+  api_key: ' 982734964837413'
+  api_secret: hZswcoOv4-I4g3iUFeBGHY5ctj8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: just4water
+  api_key: '982734964837413'
+  api_secret: hZswcoOv4-I4g3iUFeBGHY5ctj8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: just4water
+  api_key: '982734964837413'
+  api_secret: hZswcoOv4-I4g3iUFeBGHY5ctj8
+  enhance_image_tag: true
+  static_image_support: false

@@ -1,0 +1,19 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<table style="width:95%">
+  <thead>
+    <tr>
+      <th><%= link_to "Name", :sort => "name"%></th>
+      <th><%= link_to "Email", :sort => "email"%></th>
+      <th><%= link_to "Date Created", :sort => "created_at"%></th>
+    </tr>
+  </thead>
+  <%- @users.each do |user| -%>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at %></td>
+    </tr>
+  <%- end -%>
+</table>

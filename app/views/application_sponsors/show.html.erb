@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @application_sponsor.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @application_sponsor.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @application_sponsor.icon.url if @application_sponsor.icon? %> 
+</p>
+
+<%= link_to 'Edit', edit_application_sponsor_path(@application_sponsor) %> |
+<%= link_to 'Back', application_sponsors_path %>
