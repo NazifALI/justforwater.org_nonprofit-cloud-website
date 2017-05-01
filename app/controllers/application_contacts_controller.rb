@@ -1,5 +1,6 @@
 class ApplicationContactsController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :show]
+  before_action :admin_user,  only: :destroy
+  before_action :logged_in_user, only: [:index, :edit, :update, :show]
   before_action :set_application_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /application_contacts
@@ -78,6 +79,13 @@ class ApplicationContactsController < ApplicationController
       unless logged_in?
         flash[:danger] = "Please log in."
         redirect_to login_url
+      end
+    end
+
+    def admin_user
+      unless current_user.admin?
+        flash[:danger] = "You require administrator privileges to do this."
+        redirect_to(application_contacts_url)
       end
     end
 end

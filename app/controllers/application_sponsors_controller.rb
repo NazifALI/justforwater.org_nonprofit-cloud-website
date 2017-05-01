@@ -1,4 +1,6 @@
 class ApplicationSponsorsController < ApplicationController
+  before_action :admin_user,  only: :destroy
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :show]
   before_action :set_application_sponsor, only: [:show, :edit, :update, :destroy]
 
   # GET /application_sponsors
@@ -62,7 +64,20 @@ class ApplicationSponsorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    def admin_user
+      unless current_user.admin?
+        flash[:danger] = "You require administrator privileges to do this."
+        redirect_to(application_sponsors_url)
+      end
+    end
+    # Use call  backs to share common setup or constraints between actions.
     def set_application_sponsor
       @application_sponsor = ApplicationSponsor.find(params[:id])
     end

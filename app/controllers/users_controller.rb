@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     #Show either user data or sponsor data.
     @users = User.all
-    
+    redirect_to application_contacts_url
   end
 
   def new
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Successfully joined Just 4 Water!"
-      redirect_to @user
+      redirect_to application_contacts_url
     else
       render 'new'
     end
