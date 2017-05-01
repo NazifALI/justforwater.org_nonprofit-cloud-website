@@ -17,8 +17,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <% if @data %>
+      <%= f.label :email %>
+      <%= f.text_field :email, :value => @data %>
+    <% else %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    <% end %>
   </div>
 
   <div class="field">

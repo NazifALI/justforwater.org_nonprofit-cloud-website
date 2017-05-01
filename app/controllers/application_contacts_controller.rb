@@ -15,6 +15,7 @@ class ApplicationContactsController < ApplicationController
 
   # GET /application_contacts/new
   def new
+    if params.has_key?(:email) then @data = params[:email] else @data = nil end
     @application_contact = ApplicationContact.new
   end
 
