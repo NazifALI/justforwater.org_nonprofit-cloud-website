@@ -1,5 +1,4 @@
 class ApplicationContactsController < ApplicationController
-  before_action :admin_user,  only: :destroy
   before_action :logged_in_user, only: [:index, :edit, :update, :show]
   before_action :set_application_contact, only: [:show, :edit, :update, :destroy]
 
