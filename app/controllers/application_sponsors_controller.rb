@@ -56,7 +56,10 @@ class ApplicationSponsorsController < ApplicationController
   # DELETE /application_sponsors/1.json
   def destroy
     @application_sponsor.destroy
-    flash[:success] = "Sponsor information removed successfully."
+    respond_to do |format|
+      format.html { redirect_to application_sponsors_url, notice: 'Application sponsor was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
