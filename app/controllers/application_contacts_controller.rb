@@ -30,8 +30,8 @@ class ApplicationContactsController < ApplicationController
 
     respond_to do |format|
       if @application_contact.save
-        format.html { redirect_to @application_contact, notice: 'Application contact was successfully created.' }
-        format.json { render :show, status: :created, location: @application_contact }
+        format.html { redirect_to new_application_contact_url, notice: 'Contact information was submitted successfully.' }
+        #format.json { render json: @application_contact_new.errors, status: :unprocessable_entity }
       else
         format.html { render :new }
         format.json { render json: @application_contact.errors, status: :unprocessable_entity }
