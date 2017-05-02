@@ -15,6 +15,8 @@ gem "pg"
 #integration testing
 gem 'rails-controller-testing'
 gem 'carrierwave', '~> 1.0'
+#gem 'rmagick'
+gem "mini_magick"
 gem 'cloudinary'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
